@@ -1,3 +1,9 @@
+# THEORY:-
+
+BINARY CLASSIFICATION: Binary classification is a machine learning task where an algorithm sorts data into one of two possible categories or classes. It is used for problems with a yes/no or true/false outcome, such as identifying if an email is spam or not, determining if a customer will buy a product, or diagnosing a disease. 
+
+SHAP: Shapley Additive exPlanations (SHAP) is a game theory-based method for explaining the output of any machine learning model by assigning a SHAP value to each input feature. These values represent the contribution of each feature to a specific prediction, explaining how it affects the output compared to an expected value (average prediction). SHAP provides both local explanations (for individual predictions) and global explanations (for overall model behavior).  
+
 # PROBLEM STATEMENT:-
 
 Telecom companies face high customer attrition rates, leading to significant revenue loss, as acquiring new customers is often 5-25 times more expensive than retaining existing ones. The challenge is to predict which customers are at risk of churning based on historical data, enabling targeted retention strategies like personalized offers or service improvements. Without such prediction, companies rely on reactive measures, resulting in inefficient resource allocation and missed opportunities to reduce churn rates.
