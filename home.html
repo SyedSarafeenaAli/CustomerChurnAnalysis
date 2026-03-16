@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Customer Churn Prediction</h2>
+
+    <form action="/predict" method="POST">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <label>Senior Citizen (0 or 1)</label>
+                <input type="number" class="form-control" name="SeniorCitizen" required>
+
+                <label class="mt-2">Monthly Charges</label>
+                <input type="number" step="any" class="form-control" name="MonthlyCharges" required>
+
+                <label class="mt-2">Total Charges</label>
+                <input type="number" step="any" class="form-control" name="TotalCharges" required>
+
+                <label class="mt-2">Tenure</label>
+                <input type="number" class="form-control" name="tenure" required>
+
+                <label class="mt-2">Gender (Male/Female)</label>
+                <input type="text" class="form-control" name="gender" required>
+
+                <label class="mt-2">Partner (Yes/No)</label>
+                <input type="text" class="form-control" name="Partner" required>
+
+                <label class="mt-2">Dependents (Yes/No)</label>
+                <input type="text" class="form-control" name="Dependents" required>
+
+                <label class="mt-2">Phone Service (Yes/No)</label>
+                <input type="text" class="form-control" name="PhoneService" required>
+
+                <label class="mt-2">Multiple Lines (Yes/No/No phone service)</label>
+                <input type="text" class="form-control" name="MultipleLines" required>
+            </div>
+
+            <div class="col-md-6">
+                <label>Internet Service (DSL/Fiber optic/No)</label>
+                <input type="text" class="form-control" name="InternetService" required>
+
+                <label class="mt-2">Online Security (Yes/No/No internet service)</label>
+                <input type="text" class="form-control" name="OnlineSecurity" required>
+
+                <label class="mt-2">Online Backup (Yes/No/No internet service)</label>
+                <input type="text" class="form-control" name="OnlineBackup" required>
+
+                <label class="mt-2">Device Protection (Yes/No/No internet service)</label>
+                <input type="text" class="form-control" name="DeviceProtection" required>
+
+                <label class="mt-2">Tech Support (Yes/No/No internet service)</label>
+                <input type="text" class="form-control" name="TechSupport" required>
+
+                <label class="mt-2">Streaming TV (Yes/No/No internet service)</label>
+                <input type="text" class="form-control" name="StreamingTV" required>
+
+                <label class="mt-2">Streaming Movies (Yes/No/No internet service)</label>
+                <input type="text" class="form-control" name="StreamingMovies" required>
+
+                <label class="mt-2">Contract (Month-to-month/One year/Two year)</label>
+                <input type="text" class="form-control" name="Contract" required>
+
+                <label class="mt-2">Paperless Billing (Yes/No)</label>
+                <input type="text" class="form-control" name="PaperlessBilling" required>
+
+                <label class="mt-2">Payment Method</label>
+                <input type="text" class="form-control" name="PaymentMethod" required>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-lg">Predict</button>
+        </div>
+
+    </form>
+
+    {% if prediction_text %}
+        <div class="alert alert-info mt-4 text-center">
+            <h4>{{ prediction_text }}</h4>
+        </div>
+    {% endif %}
+
+</div>
+</body>
+</html>
